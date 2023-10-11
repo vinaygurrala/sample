@@ -35,7 +35,7 @@ jobs:
     displayName: Authorize salesforce org
   - bash: 
         sfdx force:source:deploy -l RunLocalTests -c -x ./manifest/package.xml -u $(OrgAlias) -w 10
-    displayName: Run Validation on source code
+    displayName: Run Validation on source code to test
  
   - bash: 
         sfdx force:source:deploy -l RunLocalTests -x ./manifest/package.xml -u $(OrgAlias) -w 10
