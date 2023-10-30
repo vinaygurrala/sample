@@ -25,6 +25,12 @@ jobs:
   - bash: 
         npm install sfdx-cli --global
     displayName: Install Salesforce CLI underway
+
+    
+- script: |
+    echo "Verifying Salesforce CLI version..."
+    sfdx --version
+  displayName: 'Verify Salesforce CLI Installation'
   - task: DownloadSecureFile@1
     name: jwtKey
     displayName: 'Download Server JWT Key'
